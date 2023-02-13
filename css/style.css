@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* 윗줄은 절대로 1번줄에 배치되어야 한다. */
+/* 폰트 import 진행 */
+@import url("./font/font.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a{ 
+    color: #333; 
+    text-decoration: none; 
+}
+img {
+    bottom: 0;
+    vertical-align: middle;
+}
+html {
+    font-size: 16px;
+}
+body {
+    color: #222;
+    font-family: 'Poppins', 'Pretendard', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+/* layout */
+.wrap {
+    display: block;
+    position: relative;
+}
+/* header */
+.header {
+    display: block;
+    position: relative;
+}
+/* 비주얼 */
+.visual {
+    display: block;
+    position: relative;
+}
+/* 서비스 */
+.service {
+    display: block;
+    position: relative;
+}
+/* 정보 */
+.info {
+    display: block;
+    position: relative;
+}
+/* 서비스 카테고리 */
+.category {
+    display: block;
+    position: relative;
+}
+/* footer */
+.footer {
+    display: block;
+    position: relative;
+}
