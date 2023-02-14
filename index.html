@@ -35,6 +35,10 @@
     />
     <meta name="format-detection" content="telephone=no" />
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -58,42 +62,79 @@
       <header class="header">
         <!-- 데스크탑 메뉴 -->
         <div class="inner">
-            <!-- 로고는 a 태그 -->
-            <a href="index.html" class="logo"></a>
-            <!-- caniuse.com 검색  -->
-            <nav class="nav">
-                <ul class="gnb">
-                    <li><a href="#"><span>ABOUT US</span></a></li>
-                    <li><a href="#"><span>제휴문의</span></a></li>
-                    <li><a href="#"><span>도시락멤버스</span></a></li>
-                    <li><a href="#"><span>와이파이도시락</span></a></li>
-                    <li><a href="#"><span>도시락유심</span></a></li>
-                    <li><a href="#"><span>도시락eSIM</span></a></li>
-                </ul>
-                <button class="mb-bt">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-            </nav>
+          <!-- 로고는 a 태그 -->
+          <a href="index.html" class="logo"></a>
+          <!-- caniuse.com 검색  -->
+          <nav class="nav">
+            <ul class="gnb">
+              <li>
+                <a href="#"><span>ABOUT US</span></a>
+              </li>
+              <li>
+                <a href="#"><span>제휴문의</span></a>
+              </li>
+              <li>
+                <a href="#"><span>도시락멤버스</span></a>
+              </li>
+              <li>
+                <a href="#"><span>와이파이도시락</span></a>
+              </li>
+              <li>
+                <a href="#"><span>도시락유심</span></a>
+              </li>
+              <li>
+                <a href="#"><span>도시락eSIM</span></a>
+              </li>
+            </ul>
+            <button class="mb-bt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
         </div>
         <!-- 모바일 메뉴 -->
         <nav class="mb-nav">
           <ul class="mb-nav-gnb">
-            <li><a href="#"><span>ABOUT US</span></a></li>
-            <li><a href="#"><span>제휴문의</span></a></li>
-            <li><a href="#"><span>도시락멤버스</span></a></li>
-            <li><a href="#"><span>와이파이도시락</span></a></li>
-            <li><a href="#"><span>도시락유심</span></a></li>
-            <li><a href="#"><span>도시락eSIM</span></a></li>
-        </ul>
+            <li>
+              <a href="#"><span>ABOUT US</span></a>
+            </li>
+            <li>
+              <a href="#"><span>제휴문의</span></a>
+            </li>
+            <li>
+              <a href="#"><span>도시락멤버스</span></a>
+            </li>
+            <li>
+              <a href="#"><span>와이파이도시락</span></a>
+            </li>
+            <li>
+              <a href="#"><span>도시락유심</span></a>
+            </li>
+            <li>
+              <a href="#"><span>도시락eSIM</span></a>
+            </li>
+          </ul>
         </nav>
       </header>
       <!--  // header  -->
 
       <!--  비주얼  -->
       <section class="visual">
-        <div class="inner"></div>
+        <!-- 
+          Swiper 
+          <div class = "swiper 사용자지정클래스"></div>
+          swiper 클래스는 Swiper 기본형 제어 css
+          사용자지정클래스(swvisual) : js 및 css 추가
+        -->
+        <div class="swiper swvisual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="visual-img bg-1"></div></div>
+            <div class="swiper-slide"><div class="visual-img bg-2"></div></div>
+            <div class="swiper-slide"><div class="visual-img bg-3"></div></div>
+            <div class="swiper-slide"><div class="visual-img bg-4"></div></div>
+          </div>
+        </div>
       </section>
       <!--  // 비주얼  -->
 

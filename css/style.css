@@ -30,8 +30,12 @@ body {
   line-height: 1;
   letter-spacing: 0;
   word-break: keep-all;
-  height: 5000px;
 }
+html.active {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 /* 공통요소 : 2번 이상 활용하는 경우 */
 .inner {
   display: block;
@@ -203,8 +207,8 @@ body {
   color: #222;
 }
 /* 모바일 버튼 애니메이션 */
-.mb-bt.active span {
-  background-color: #333;
+.mb-bt span.active {
+  background-color: #222;
 }
 .mb-bt.active span:nth-child(1) {
   transform: rotate(45deg);
@@ -239,11 +243,11 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .header {
-    height: 70px;
+    height: 70px !important;
   }
   .logo {
-    top: 20px;
-    width: 120px;
+    top: 20px !important;
+    width: 120px !important;
   }
   .gnb {
     display: none;
@@ -261,6 +265,18 @@ body {
   height: 100vh;
   background: url("../img/main_visual_1.jpg") no-repeat center;
   background-size: cover;
+}
+.swvisual {
+}
+.visual-img {
+}
+.bg-1 {
+}
+.bg-2 {
+}
+.bg-3 {
+}
+.bg-4 {
 }
 /* 서비스 */
 .service {
