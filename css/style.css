@@ -30,16 +30,15 @@ body {
   line-height: 1;
   letter-spacing: 0;
   word-break: keep-all;
+  height: 5000px;
 }
-/* 공통요소 */
+/* 공통요소 : 2번 이상 활용하는 경우 */
 .inner {
   display: block;
   position: relative;
-  /* 반응형이므로 max-width도 써준다. */
-  max-width: 1420px;
+  max-width: 1420px; /* 반응형이므로 max-width도 써준다. */
   width: 100%;
-  /* block 요소 가운데 정렬 */
-  margin: 0 auto;
+  margin: 0 auto; /* block 요소 가운데 정렬 */
 }
 /* layout */
 .wrap {
@@ -60,10 +59,12 @@ body {
   z-index: 9999;
   background: rgba(255, 255, 255, 0);
   transition: height 0.5s, background 0.5s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .header .inner {
   max-width: 100%;
   height: 100%;
+  z-index: 9;
 }
 /*  left, top, right, bottom 사용시, 
     반드시 position:absolute를 쓴다.
@@ -86,27 +87,170 @@ body {
   transition: top 0.5s, background 0.5s;
 }
 
+.nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.gnb {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+/* 주의사항 : 만약 서브메뉴가 있다면 - .gnb > li */
+.gnb > li {
+}
+.gnb > li > a {
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 40px 34px;
+}
+.gnb > li > a > span {
+  position: relative;
+  display: block;
+  padding-bottom: 7px;
+}
+.gnb > li > a > span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.5s;
+}
+.gnb > li > a:hover > span::after {
+  width: 100%;
+}
+/*  JS에서는 display:none이면 선택이 안될 때가 있다. (opacity : 0도 배제) */
+
+.mb-bt {
+  position: absolute;
+  right: -20000px;
+  top: 24px;
+
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.mb-bt span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+.mb-bt span:nth-child(1) {
+  top: 0;
+  transition: transform 0.3s;
+}
+.mb-bt span:nth-child(2) {
+  top: calc(50% - 1px);
+  transition: opacity 0.2s;
+}
+.mb-bt span:nth-child(3) {
+  bottom: 0;
+  transition: transform 0.3s;
+}
+
+/* a모바일 메뉴 */
+.mb-nav {
+  /* 만약 relative면 다른 영역에 영향을 준다. (margin, padding, width, height... */
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 90px;
+  transition: left 0.3s ease-in-out;
+}
+
+.mb-nav-gnb {
+}
+.mb-nav-gnb > li {
+  border-bottom: 1px solid #e5e5e5;
+}
+.mb-nav-gnb > li > a {
+  display: block;
+  padding: 20px 70px 20px 40px;
+  font-size: 24px;
+}
+
 /* 스크롤 시, css 적용 */
 .header.active {
   background: rgba(255, 255, 255, 1);
   height: 80px;
 }
-.header.active .logo {
+.logo.active {
   top: 25px;
   background: url("../img/logo.png") no-repeat center;
   background-size: cover;
 }
-
-.nav {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
+.logo.active-blue {
+  background: url("../img/logo.png") no-repeat center;
+  background-size: cover;
 }
-.gnb {
-    display: flex;
-    height: 100%;
-    align-items: center;
+.gnb > li > a.active {
+  color: #222;
+}
+/* 모바일 버튼 애니메이션 */
+.mb-bt.active span {
+  background-color: #333;
+}
+.mb-bt.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: calc(50% - 1px);
+  bottom: auto;
+}
+.mb-bt.active span:nth-child(2) {
+  opacity: 0;
+}
+.mb-bt.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: calc(50% - 1px);
+}
+
+/* 모바일 메뉴 애니메이션 */
+.mb-nav.active {
+  left: 0;
+}
+@media screen and (max-width: 1280px) {
+  .header {
+    height: 90px;
+  }
+  .logo {
+    top: 30px;
+    left: 20px;
+    width: 150px;
+    height: 30px;
+  }
+  .gnb > li > a {
+    padding: 25px 34px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 70px;
+  }
+  .logo {
+    top: 20px;
+    width: 120px;
+  }
+  .gnb {
+    display: none;
+  }
+  .mb-bt {
+    right: 20px;
+  }
 }
 
 /* 비주얼 */
