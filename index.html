@@ -37,6 +37,13 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- waypoint -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+      integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- xeicon -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <!-- CSS -->
@@ -56,6 +63,8 @@
     <script src="js/script.js"></script>
   </head>
   <body>
+    <!-- 위로가기 -->
+    <button class="goTop">위로가기</button>
     <!-- 메인 레이아웃 용도 : 관례 -->
     <div class="wrap">
       <!--  header  -->
@@ -170,19 +179,46 @@
 
       <!--  서비스  -->
       <section class="service">
-        <div class="inner"></div>
+        <div class="inner">
+          <h2><span>도시락통</span> 서비스 둘러보기</h2>
+          <div class="service-contents">
+            <div class="service-left">
+              <a href="#" class="service-link-1">왼쪽</a>
+            </div>
+            <div class="service-right">
+              <a href="#" class="service-link-2">상단</a>
+              <a href="#" class="service-link-3">하단</a>
+            </div>
+          </div>
+        </div>
       </section>
       <!--  // 서비스  -->
 
       <!--  정보  -->
       <section class="info">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="info-contents">
+            <div class="info-left"></div>
+            <div class="info-right"></div>
+          </div>
+        </div>
       </section>
       <!--  // 정보  -->
 
       <!--  서비스 카테고리  -->
       <section class="category">
-        <div class="inner"></div>
+        <!-- Swiper -->
+        <div class="swiper swcategory">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#" class="category-link clink-1">내용</a></div>
+            <div class="swiper-slide"><a href="#" class="category-link clink-2">내용</a></div>
+            <div class="swiper-slide"><a href="#" class="category-link clink-3">내용</a></div>
+          </div>
+        </div>
+        <!-- 안내창 -->
+        <div class="category-pop">
+          <img src="img/scroll_guide2.png" alt="">
+        </div>
       </section>
       <!--  // 서비스 카테고리  -->
 

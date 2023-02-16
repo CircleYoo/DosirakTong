@@ -35,7 +35,24 @@ html.active {
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
+/* 위로가기 */
+.goTop {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+  border: 0;
+  opacity: 0;
+  background-color: blue;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.goTop.active {
+  opacity: 1;
+  background-color: red;
+}
 /* 공통요소 : 2번 이상 활용하는 경우 */
 .inner {
   display: block;
@@ -43,6 +60,7 @@ html.active {
   max-width: 1420px; /* 반응형이므로 max-width도 써준다. */
   width: 100%;
   margin: 0 auto; /* block 요소 가운데 정렬 */
+  padding: 0 30px;
 }
 /* layout */
 .wrap {
@@ -265,6 +283,7 @@ html.active {
   height: 100vh;
   background: url("../img/main_visual_1.jpg") no-repeat center;
   background-size: cover;
+  transition: height 0.5s;
 }
 .swvisual {
   width: 100%;
@@ -368,7 +387,6 @@ i {
 }
 .swvisual-list {
   display: flex;
-
 }
 .swvisual-list li {
   position: relative;
@@ -380,7 +398,7 @@ i {
   cursor: pointer;
   transition: color 0.3s;
 }
-.swvisual-list li::before{
+.swvisual-list li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -389,7 +407,7 @@ i {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
-.swvisual-list li::after{
+.swvisual-list li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -401,24 +419,210 @@ i {
 .swvisual-list li.active {
   color: rgba(255, 255, 255, 1);
 }
-.swvisual-list li.active::after{
+.swvisual-list li.active::after {
   width: 100%;
   transition: width 2s; /* 1초마다 그림이 바뀌기 때문에 동일하게 맞춰준다. */
+}
+
+/* 비주얼 반응형 */
+@media screen and (max-width: 1280px) {
+  /* 비주얼 안쪽의 내용부분 사이즈 조절(생략) */
+}
+@media screen and (max-width: 1024px) {
+  .visual {
+    min-height: 800px;
+    /* height: 48.95vw; */
+    height: 800px;
+  }
+  /* 비주얼 안쪽의 내용부분 사이즈 조절(생략) */
+}
+@media screen and (max-width: 640px) {
+  /* 비주얼 안쪽의 내용부분 사이즈 조절(생략) */
 }
 /* 서비스 */
 .service {
   display: block;
   position: relative;
+  height: auto;
+}
+.service .inner {
+  height: 100%;
+  padding: 30px;
+  margin-top: 180px;
+}
+.service h2 {
+  text-align: center;
+  /* 글자 세팅 */
+}
+.service span {
+  /* 글자색 수정 */
+}
+.service-contents {
+  display: flex;
+  justify-content: space-between;
+  height: 680px;
+}
+.service-left {
+  width: calc(50% - 10px);
+  height: 100%;
+}
+.service-right {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: space-between;
+}
+.service-link-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/main_service_img1.jpg") no-repeat center;
+  background-size: cover;
+}
+.service-link-2 {
+  display: block;
+  width: 100%;
+  height: calc(50% - 10px);
+  background: url("../img/main_service_img2.jpg") no-repeat center;
+  background-size: cover;
+}
+.service-link-3 {
+  display: block;
+  width: 100%;
+  height: calc(50% - 10px);
+  background: url("../img/main_service_img3.jpg") no-repeat center;
+  background-size: cover;
+}
+@media screen and (max-width: 1460px) {
+  .service-contents {
+    /* 1460 - 680 */
+    height: 46.57vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .service-contents {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .service-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .service-right {
+    width: 100%;
+    justify-content: center;
+  }
+  .service-link-1 {
+    max-width: 660px;
+    height: 80vw;
+    /* flex를 적용 안했으므로 */
+    margin: 0 auto;
+    min-height: 240px;
+  }
+  .service-link-2 {
+    width: 660px;
+    height: 30vw;
+    min-height: 240px;
+    margin-bottom: 20px;
+  }
+  .service-link-3 {
+    width: 660px;
+    height: 30vw;
+    min-height: 240px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .service-link-1 {
+    height: 30vw;
+  }
 }
 /* 정보 */
 .info {
   display: block;
   position: relative;
 }
+.info .inner {
+  padding: 30px;
+  margin-top: 180px;
+}
+.info-contents {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 430px;
+}
+.info-left {
+  width: calc(50% - 10px);
+  height: 100%;
+  background-color: aquamarine;
+}
+.info-right {
+  width: calc(50% - 10px);
+  height: 100%;
+  background-color: yellowgreen;
+}
+@media screen and (max-width: 1024px) {
+  .info-contents {
+    height: 384px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .info-contents {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .info-left {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+  }
+  .info-right {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+  }
+}
 /* 서비스 카테고리 */
 .category {
   display: block;
   position: relative;
+  height: 400px;
+}
+.swcategory {
+  height: 100%;
+}
+.category-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.clink-1 {
+  background-color: coral;
+}
+.clink-2 {
+  background-color: skyblue;
+}
+.clink-3 {
+  background-color: slateblue;
+}
+.category-pop {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+@media screen and (max-width: 1024px) {
+  .category-pop {
+    display: flex;
+  }
 }
 /* footer */
 .footer {
