@@ -461,6 +461,7 @@ i {
   display: flex;
   justify-content: space-between;
   height: 680px;
+
 }
 .service-left {
   width: calc(50% - 10px);
@@ -479,6 +480,7 @@ i {
   height: 100%;
   background: url("../img/main_service_img1.jpg") no-repeat center;
   background-size: cover;
+  border-radius: 1rem;
 }
 .service-link-2 {
   display: block;
@@ -486,6 +488,7 @@ i {
   height: calc(50% - 10px);
   background: url("../img/main_service_img2.jpg") no-repeat center;
   background-size: cover;
+  border-radius: 1rem;
 }
 .service-link-3 {
   display: block;
@@ -493,6 +496,7 @@ i {
   height: calc(50% - 10px);
   background: url("../img/main_service_img3.jpg") no-repeat center;
   background-size: cover;
+  border-radius: 1rem;
 }
 @media screen and (max-width: 1460px) {
   .service-contents {
