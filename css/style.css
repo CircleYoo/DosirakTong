@@ -2,7 +2,9 @@
 /* 윗줄은 절대로 1번줄에 배치되어야 한다. */
 /* 폰트 import 진행 */
 @import url("./font/font.css");
-
+:root {
+  --main-color: #3a68b2;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,6 +63,10 @@ html.active {
   width: 100%;
   margin: 0 auto; /* block 요소 가운데 정렬 */
   padding: 0 30px;
+}
+
+.main-color {
+  color: var(--main-color);
 }
 /* layout */
 .wrap {
