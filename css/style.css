@@ -459,6 +459,8 @@ i {
 .service h2 {
   text-align: center;
   /* 글자 세팅 */
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 .service span {
   /* 글자색 수정 */
