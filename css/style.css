@@ -640,4 +640,6 @@ i {
 .footer {
   display: block;
   position: relative;
+  height: 250px;
+  background-color: #222;
 }
