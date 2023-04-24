@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* 윗줄은 절대로 1번줄에 배치되어야 한다. */
+/* 폰트 import 진행 */
+@import url("./font/font.css");
+
+$black: #333;
+$gray: #ECEEF2;
+$main-color: #4772E3;
+$point-color: #FFBC61;
+$sub-color: #84CBFF;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+img {
+    bottom: 0;
+    vertical-align: middle;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: $black;
+    font-family: "Montserrat", "Pretendard", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+
+html.active {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* 위로가기 */
+.goTop {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    z-index: 9999;
+    width: 100px;
+    height: 100px;
+    border: 0;
+    opacity: 0;
+    background-color: $main-color;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* 공통요소 : 2번 이상 활용하는 경우 */
+.inner {
+    display: block;
+    position: relative;
+    max-width: 1420px;
+    /* 반응형이므로 max-width도 써준다. */
+    width: 100%;
+    margin: 0 auto;
+    /* block 요소 가운데 정렬 */
+    padding: 0 30px;
+}
+
+
+// header style sheet
+
+// visual style sheet
+
+// service style sheet
+
+// info style sheet
+
+// category style sheet
+
+// footer style sheet
+

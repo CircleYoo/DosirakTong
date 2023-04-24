@@ -1,22 +1,28 @@
-/* Godo */
+/* Montserrat */
 @font-face {
-  font-family: "Godo";
-  font-style: normal;
+  font-family: "Montserrat";
   font-weight: 400;
-  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2")
-      format("woff2"),
-    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff")
-      format("woff");
+  src: url("Montserrat-Regular.ttf") format("opentype");
 }
+
 @font-face {
-  font-family: "Godo";
-  font-style: normal;
-  font-weight: 700;
-  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2")
-      format("woff2"),
-    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff")
-      format("woff");
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: url("Montserrat-Medium.ttf") format("opentype");
 }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url("Montserrat-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("Montserrat-Bold.ttf") format("opentype");
+}
+
 
 /* Pretendard */
 @font-face {
@@ -44,3 +50,19 @@
   font-weight: 700;
   src: url("Pretendard-Bold.otf") format("opentype");
 }
+
+/* @font-face {
+  font-family: "Godo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2") format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Godo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2") format("woff2"),
+    url("//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff") format("woff");
+} */
