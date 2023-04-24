@@ -26,6 +26,10 @@ img {
 html {
   font-size: 16px;
 }
+html.active {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
 body {
   color: #333;
@@ -34,11 +38,6 @@ body {
   line-height: 1;
   letter-spacing: 0;
   word-break: keep-all;
-}
-
-html.active {
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 /* 위로가기 */
@@ -65,7 +64,6 @@ html.active {
   width: 100%;
   margin: 0 auto;
   /* block 요소 가운데 정렬 */
-  padding: 0 30px;
 }
 
 .main-color {
@@ -75,7 +73,6 @@ html.active {
 .header {
   /* 메뉴가 상단에 고정해서 스크롤이 된다면 fixed */
   display: flex;
-  position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -83,9 +80,114 @@ html.active {
   height: 5.5rem;
   /* header는 무조건 z-index 쓰자 : 최댓값으로 */
   z-index: 9999;
-  background-color: #4772E3;
+  background-color: #fff;
   transition: height 0.5s, background 0.5s;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header .inner {
+  /*  left, top, right, bottom 사용시, 
+      반드시 position:absolute를 쓴다.
+      position:relative에 금지
+  */
+  display: flex;
+  max-width: 100%;
+  height: 100%;
+  z-index: 9;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.6458vw;
+}
+.header .inner .logo {
+  width: 116px;
+  height: 32px;
+  background-size: cover;
+  background: url("../img/logo.png") no-repeat center;
+  transition: top 0.5s, background 0.5s;
+}
+.header .inner .nav {
+  height: 100%;
+}
+.header .inner .nav .gnb {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  height: 100%;
+}
+.header .inner .nav .gnb a {
+  font-size: 18px;
+  font-weight: 500;
+}
+.header .inner .nav .gnb a span {
+  position: relative;
+  display: block;
+  padding-bottom: 4px;
+}
+.header .inner .nav .gnb a span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.5s;
+}
+.header .inner .nav .gnb a:hover span::after {
+  width: 100%;
+}
+.header .mb-nav {
+  display: none;
+}
+
+.visual {
+  background: url("../img/main_visual_1.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 2rem;
+  display: block;
+  position: relative;
+  height: 100vh;
+  transition: height 0.5s;
+  margin: 0 2.0833vw;
+}
+.visual .swvisual {
+  width: 100%;
+  height: 100%;
+}
+.visual .swvisual .visual-img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.visual .swvisual .visual-img .bg-1 {
+  background: url("../img/main_visual_1.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual .swvisual .visual-img .bg-2 {
+  background: url("../img/main_visual_2.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual .swvisual .visual-img .bg-3 {
+  background: url("../img/main_visual_3.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual .swvisual .visual-img .bg-4 {
+  background: url("../img/main_visual_4.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.service {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: auto;
+}
+.service .inner {
+  height: 100%;
+  margin: 12rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
