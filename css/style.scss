@@ -75,8 +75,30 @@ html.active {
     padding: 0 30px;
 }
 
+.main-color {
+    color: $main-color;
+}
+
 
 // header style sheet
+.header {
+        /* 메뉴가 상단에 고정해서 스크롤이 된다면 fixed */
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 5.5rem;
+        /* header는 무조건 z-index 쓰자 : 최댓값으로 */
+        z-index: 9999;
+        // background: rgba(255, 255, 255, 0);
+        background-color: #4772E3;
+        transition: height 0.5s, background 0.5s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
 
 // visual style sheet
 
