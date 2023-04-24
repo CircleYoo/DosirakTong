@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* 윗줄은 절대로 1번줄에 배치되어야 한다. */
+// npx sass --watch css/style.scss css/style.css
 /* 폰트 import 진행 */
 @import url("./font/font.css");
 
@@ -38,13 +39,11 @@ img {
 
 html {
     font-size: 16px;
-
-    &.active {
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
 }
-
+html.active {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 body {
     color: $black;
     font-family: "Montserrat", "Pretendard", sans-serif;
@@ -74,10 +73,10 @@ body {
 .inner {
     display: block;
     position: relative;
-    max-width: 1420px;
+    // max-width: 1420px;
     /* 반응형이므로 max-width도 써준다. */
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     /* block 요소 가운데 정렬 */
 
 }
@@ -131,16 +130,16 @@ body {
                 align-items: center;
                 display: flex;
                 flex-direction: row;
-                gap: 5rem;
+                gap: 4.1667vw; //80px
                 height: 100%;
                 
                 a {
-                    font-size: 18px;
-                    font-weight: 500;
-
                     span {
-                        position: relative;
                         display: block;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: -0.02em;
+                        position: relative;
                         padding-bottom: 4px;
 
                         &::after {
@@ -176,13 +175,14 @@ body {
     display: block;
     position: relative;
     // width: 100%;
-    height: 100vh;
+    height: 60rem;
     transition: height 0.5s;
     margin: 0 2.0833vw;
 
     .swvisual {
         width: 100%;
         height: 100%;
+        border-radius: 2rem;
 
         .visual-img {
             // 기본(공통) slide 내용 css
@@ -191,24 +191,146 @@ body {
             width: 100%;
             height: 100%;
 
-            .bg-1 {
-                background: url("../img/main_visual_1.jpg") no-repeat center;
-                background-size: cover;
-            }
-        
-            .bg-2 {
-                background: url("../img/main_visual_2.jpg") no-repeat center;
-                background-size: cover;
-            }
-        
-            .bg-3 {
-                background: url("../img/main_visual_3.jpg") no-repeat center;
-                background-size: cover;
-            }
-        
-            .bg-4 {
-                background: url("../img/main_visual_4.jpg") no-repeat center;
-                background-size: cover;
+        }
+        .bg-1 {
+            background: url("../img/main_visual_1.jpg") no-repeat center;
+            background-size: cover;
+        }
+    
+        .bg-2 {
+            background: url("../img/main_visual_2.jpg") no-repeat center;
+            background-size: cover;
+        }
+    
+        .bg-3 {
+            background: url("../img/main_visual_3.jpg") no-repeat center;
+            background-size: cover;
+        }
+    
+        .bg-4 {
+            background: url("../img/main_visual_4.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        .swvisual-control {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+
+            .inner {
+                color: #fff;
+                padding: 0 11vw;
+                letter-spacing: -0.02em;
+
+                .swvisual-title {
+                    font-weight: 700;
+                    font-size: 5rem;
+                    padding-bottom: 1.25rem;
+                }
+                .swvisual-txt {
+                    font-weight: 400;
+                    font-size: 1.75rem;
+                }
+                .swvisual-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5rem;
+                    padding-top: 4.5rem;
+
+                    p, i {
+                        color: #fff;
+                    }
+                }
+                .swvisual-sub {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 9.5rem;
+
+
+                    // 좌/우 이동버튼
+                    .swvisual-btn-wrap {
+                        position: relative;
+                        width: 9rem;
+
+                        .swvisual-btn {
+                            cursor: pointer;
+                            width: 5rem;
+                            height: 5rem;
+                            border: 1px solid rgba(255, 255, 255, 0.5);;
+                            border-radius: 50%;
+                            background-color: transparent;
+                            color: #fff;
+                            font-size: 1.5rem;
+
+                            &:last-child{
+                                position: absolute;
+                                right: 1%;
+                            }
+                        }
+                    }
+
+                    // 네비게이션
+                    .swvisual-list {
+                        display: flex;
+
+                        li {
+                            position: relative;
+                            display: block;
+                            width: 80px;
+                            height: 28px;
+                            color: rgba(255, 255, 255, 0.3);
+                            padding: 0 10px;
+                            cursor: pointer;
+                            transition: color 0.3s;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 2px;
+                                background: rgba(255, 255, 255, 0.3);
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 0%;
+                                height: 2px;
+                                background: rgba(255, 255, 255, 1);
+                            }
+                        }
+                    }
+
+                    // scroll down
+                    .swvisual-dir{
+                        position: relative;
+
+                        div {
+                            width: 5rem;
+                            height: 5rem;
+                            background-color: $gray;
+                            opacity: 0.3;
+                            border-radius: 50%;
+                        }
+
+                        p {
+                            text-transform: uppercase;
+                            letter-spacing: 0.2em;
+                            font-size: 0.625rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
             }
         }
     }
@@ -223,11 +345,55 @@ body {
 
     .inner {
         height: 100%;
-        margin: $hori-gap 0;
+        margin: $hori-gap $ver-gap;
     }
 
     h2 {
+        text-align: center;
+        /* 글자 세팅 */
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
 
+    .service-contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.25rem;
+        
+        .service-link {
+            background-size: cover;
+            border-radius: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 3rem;
+            grid-template-rows: 1fr 1fr;
+            padding: 3rem;
+
+            .service-title {
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                color: #fff;
+            }
+
+            .service-more {
+                grid-row: 1/3;
+                grid-column: 2/3;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        .service-link-1 {
+            grid-row: 1 / 3;
+            background: url("../img/main_service_img1.jpg") no-repeat center;
+        }
+        .service-link-2 {
+            background: url("../img/main_service_img2.jpg") no-repeat center;
+        }
+        .service-link-3 {
+            background: url("../img/main_service_img3.jpg") no-repeat center;
+        }
     }
 }
 

@@ -26,6 +26,7 @@ img {
 html {
   font-size: 16px;
 }
+
 html.active {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -59,10 +60,8 @@ body {
 .inner {
   display: block;
   position: relative;
-  max-width: 1420px;
   /* 반응형이므로 max-width도 써준다. */
   width: 100%;
-  margin: 0 auto;
   /* block 요소 가운데 정렬 */
 }
 
@@ -112,16 +111,15 @@ body {
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 4.1667vw;
   height: 100%;
 }
-.header .inner .nav .gnb a {
+.header .inner .nav .gnb a span {
+  display: block;
   font-size: 18px;
   font-weight: 500;
-}
-.header .inner .nav .gnb a span {
+  letter-spacing: -0.02em;
   position: relative;
-  display: block;
   padding-bottom: 4px;
 }
 .header .inner .nav .gnb a span::after {
@@ -148,13 +146,14 @@ body {
   border-radius: 2rem;
   display: block;
   position: relative;
-  height: 100vh;
+  height: 60rem;
   transition: height 0.5s;
   margin: 0 2.0833vw;
 }
 .visual .swvisual {
   width: 100%;
   height: 100%;
+  border-radius: 2rem;
 }
 .visual .swvisual .visual-img {
   position: relative;
@@ -162,21 +161,125 @@ body {
   width: 100%;
   height: 100%;
 }
-.visual .swvisual .visual-img .bg-1 {
+.visual .swvisual .bg-1 {
   background: url("../img/main_visual_1.jpg") no-repeat center;
   background-size: cover;
 }
-.visual .swvisual .visual-img .bg-2 {
+.visual .swvisual .bg-2 {
   background: url("../img/main_visual_2.jpg") no-repeat center;
   background-size: cover;
 }
-.visual .swvisual .visual-img .bg-3 {
+.visual .swvisual .bg-3 {
   background: url("../img/main_visual_3.jpg") no-repeat center;
   background-size: cover;
 }
-.visual .swvisual .visual-img .bg-4 {
+.visual .swvisual .bg-4 {
   background: url("../img/main_visual_4.jpg") no-repeat center;
   background-size: cover;
+}
+.visual .swvisual .swvisual-control {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.visual .swvisual .swvisual-control .inner {
+  color: #fff;
+  padding: 0 11vw;
+  letter-spacing: -0.02em;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-title {
+  font-weight: 700;
+  font-size: 5rem;
+  padding-bottom: 1.25rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-txt {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 4.5rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-link p, .visual .swvisual .swvisual-control .inner .swvisual-link i {
+  color: #fff;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9.5rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap {
+  position: relative;
+  width: 9rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap .swvisual-btn {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap .swvisual-btn:last-child {
+  position: absolute;
+  right: 1%;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list {
+  display: flex;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 28px;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir {
+  position: relative;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir div {
+  width: 5rem;
+  height: 5rem;
+  background-color: #ECEEF2;
+  opacity: 0.3;
+  border-radius: 50%;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir p {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.625rem;
+  font-weight: 400;
 }
 
 .service {
@@ -187,7 +290,49 @@ body {
 }
 .service .inner {
   height: 100%;
-  margin: 12rem 0;
+  margin: 12rem 13.0208vw;
+}
+.service h2 {
+  text-align: center;
+  /* 글자 세팅 */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.service .service-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.25rem;
+}
+.service .service-contents .service-link {
+  background-size: cover;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: 1fr 1fr;
+  padding: 3rem;
+}
+.service .service-contents .service-link .service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.service .service-contents .service-link .service-more {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+.service .service-contents .service-link .service-more i {
+  color: #fff;
+}
+.service .service-contents .service-link-1 {
+  grid-row: 1/3;
+  background: url("../img/main_service_img1.jpg") no-repeat center;
+}
+.service .service-contents .service-link-2 {
+  background: url("../img/main_service_img2.jpg") no-repeat center;
+}
+.service .service-contents .service-link-3 {
+  background: url("../img/main_service_img3.jpg") no-repeat center;
 }
 
 /*# sourceMappingURL=style.css.map */
