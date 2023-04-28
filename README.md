@@ -9,3 +9,5 @@
 > `JavaScript(ES6)` <br/>
   `HTML5` <br/>
   `SCSS`
+
+## ✔ 주요기능
