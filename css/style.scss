@@ -463,6 +463,7 @@ body {
 .category {
     .inner {
         padding: 0 $ver-gap $hori-gap;
+        height: 100%;
         
         .category-desc {
             p {
@@ -480,17 +481,18 @@ body {
         }
     
         .swcategory {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 1vw;
+            
             .swiper-wrapper {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr;
-                grid-gap: 1vw;
                 margin-top: 4rem;
     
                 .swiper-slide {
                     background: $gray;
                     border-radius: 2rem;
                     position: relative;
+                    width: 30%;
                     
                     &::after {
                         display: block;
@@ -503,7 +505,6 @@ body {
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
                         padding: 2rem;
                         
                         .category-title {
