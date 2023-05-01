@@ -358,7 +358,7 @@ body {
     .service-contents {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 1.25rem;
+        grid-gap: 1vw;
         
         .service-link {
             
@@ -460,6 +460,85 @@ body {
 }
 
 // category style sheet
+.category {
+    .inner {
+        padding: 0 $ver-gap $hori-gap;
+        
+        .category-desc {
+            p {
+                color: $main-color;
+                letter-spacing: -0.02em;
+                font-size: 1.75rem;
+                padding-bottom: 1.5rem;
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 3rem;
+                letter-spacing: -0.02em;
+                line-height: 133%;
+            }
+        }
+    
+        .swcategory {
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 1vw;
+                margin-top: 4rem;
+    
+                .swiper-slide {
+                    background: $gray;
+                    border-radius: 2rem;
+                    position: relative;
+                    
+                    &::after {
+                        display: block;
+                        content: "";
+                        padding-bottom: 100%;
+                    }
+                    a.category-link {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        padding: 2rem;
+                        
+                        .category-title {
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        .category-desc {
+                            font-weight: 500;
+                            line-height: 150%;
+                            letter-spacing: -0.02em;
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+        .category-pop {
+            display: none;
+        }
+    }
+}
 
 // footer style sheet
+.footer {
+    .inner {
+        background-color: $black;
+        padding: 4rem;
+
+        p{
+            color: #ccc;
+            font-weight: 400;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    }
+}
 
