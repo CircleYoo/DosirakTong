@@ -407,6 +407,57 @@ body {
 }
 
 // info style sheet
+.info {
+    position: relative;
+    height: auto;
+
+    .inner {
+        height: 100%;
+        padding: 0 $ver-gap $hori-gap;
+
+        .info-contents {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            // justify-content: space-between;
+
+            .info-title {
+                font-weight: 500;
+                font-size: 3rem;
+                letter-spacing: -0.02em;
+                line-height: 133%
+            }
+            .info-right {
+                .info-desc {
+                    font-size: 1.75rem;
+                    letter-spacing: -0.03em;
+                    font-weight: 500;
+                    margin-bottom: 2rem;
+                }
+                p {
+                    font-size: 1.125rem;
+                    line-height: 156%;
+                    text-align: justify;
+                    margin-bottom: 1.5rem;
+                }
+
+                .info-link {
+                    display: inline-flex;
+                    align-items: center;
+                    border: 1px solid $black;
+                    border-radius: 3rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    margin-top: 4rem;
+                    
+                    i {
+                        margin-left: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // category style sheet
 
