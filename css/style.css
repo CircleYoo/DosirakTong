@@ -205,13 +205,16 @@ body {
   align-items: center;
   gap: 1.5rem;
   padding-top: 4.5rem;
-}
-.visual .swvisual .swvisual-control .inner .swvisual-link p, .visual .swvisual .swvisual-control .inner .swvisual-link i {
   color: #fff;
 }
+.visual .swvisual .swvisual-control .inner .swvisual-link:hover i {
+  transition: transform 0.4s ease-out;
+  transform: translateX(50%);
+}
 .visual .swvisual .swvisual-control .inner .swvisual-sub {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 9rem 1fr 5rem;
+  gap: 3rem;
   justify-content: space-between;
   align-items: center;
   padding-top: 9.5rem;
@@ -224,7 +227,7 @@ body {
   cursor: pointer;
   width: 5rem;
   height: 5rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   background-color: transparent;
   color: #fff;
@@ -234,16 +237,27 @@ body {
   position: absolute;
   right: 1%;
 }
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-link.active {
+  visibility: hidden;
+}
 .visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list {
   display: flex;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li.active {
+  color: rgb(255, 255, 255);
+}
+.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li.active::after {
+  width: 100%;
+  transition: width 2s;
+  /* 1초마다 그림이 바뀌기 때문에 동일하게 맞춰준다. */
 }
 .visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li {
   position: relative;
   display: block;
-  width: 80px;
-  height: 28px;
+  width: 25%;
+  height: 1.75rem;
   color: rgba(255, 255, 255, 0.3);
-  padding: 0 10px;
+  padding: 0 0.625rem;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -280,6 +294,22 @@ body {
   letter-spacing: 0.2em;
   font-size: 0.625rem;
   font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: max-content;
+  transform: rotate(-90deg);
+  animation: upDown 1.5s ease-in-out infinite;
+}
+@keyframes upDown {
+  0%, 100% {
+    transform: rotate(-90deg) translate(15%);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(-90deg) translate(0);
+    opacity: 1;
+  }
 }
 
 .service {
@@ -332,6 +362,7 @@ body {
   color: #fff;
   font-weight: 500;
   letter-spacing: -0.02em;
+  line-height: 125%;
 }
 .service .service-contents .service-link .service-inner .service-desc br {
   display: none;
@@ -346,6 +377,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  align-self: end;
 }
 .service .service-contents .service-link .service-inner .service-more i {
   color: #333;
