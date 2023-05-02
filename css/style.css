@@ -302,43 +302,65 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1vw;
+  height: 42.5rem;
 }
 .service .service-contents .service-link {
   border-radius: 2rem;
+  position: relative;
+  transition: all 0.3s;
+}
+.service .service-contents .service-link:hover {
+  background-size: 120%;
+}
+.service .service-contents .service-link .service-inner {
   display: grid;
   grid-template-columns: 1fr 3rem;
-  grid-template-rows: 1fr 1fr;
   padding: 3rem;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-.service .service-contents .service-link .service-title {
+.service .service-contents .service-link .service-inner .service-title {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #fff;
 }
-.service .service-contents .service-link .service-desc {
+.service .service-contents .service-link .service-inner .service-desc {
   color: #fff;
   font-weight: 500;
   letter-spacing: -0.02em;
 }
-.service .service-contents .service-link .service-more {
+.service .service-contents .service-link .service-inner .service-desc br {
+  display: none;
+}
+.service .service-contents .service-link .service-inner .service-more {
   grid-row: 1/3;
   grid-column: 2/3;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
-.service .service-contents .service-link .service-more i {
-  color: #fff;
+.service .service-contents .service-link .service-inner .service-more i {
+  color: #333;
 }
 .service .service-contents .service-link-1 {
   grid-row: 1/3;
-  background: url("../img/main_service_img1.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(146, 188, 212, 0.1) 0%, rgba(21, 26, 16, 0.4) 100%), url("../img/main_service_img1.jpg") no-repeat center;
   background-size: cover;
 }
 .service .service-contents .service-link-2 {
-  background: url("../img/main_service_img2.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(146, 188, 212, 0.1) 0%, rgba(21, 26, 16, 0.4) 100%), url("../img/main_service_img2.jpg") no-repeat center;
   background-size: cover;
 }
 .service .service-contents .service-link-3 {
-  background: url("../img/main_service_img3.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(146, 188, 212, 0.1) 0%, rgba(21, 26, 16, 0.45) 100%), url("../img/main_service_img3.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -359,6 +381,9 @@ body {
   font-size: 3rem;
   letter-spacing: -0.02em;
   line-height: 133%;
+}
+.info .inner .info-contents .info-right {
+  margin-right: 1vw;
 }
 .info .inner .info-contents .info-right .info-desc {
   font-size: 1.75rem;
@@ -410,7 +435,6 @@ body {
   height: initial;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link {
-  background: #ECEEF2;
   border-radius: 2rem;
   display: flex;
   gap: 1rem;
@@ -418,7 +442,7 @@ body {
   justify-content: space-between;
   height: 100%;
   padding: 9.5vw 2rem 2rem 2rem;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link:not(.clink-3) {
   margin-right: 1vw;
@@ -439,14 +463,23 @@ body {
   font-size: 0.875rem;
   margin-top: 3rem;
 }
+.category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1 {
+  background: url(../img/banner_member.png) no-repeat right top, #ECEEF2;
+}
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1:hover {
-  background-color: #84CBFF;
+  background: url(../img/banner_member_on.png) no-repeat right top, #84CBFF;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide .clink-2 {
+  background: url(../img/banner_talk.png) no-repeat right top, #ECEEF2;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-2:hover {
-  background-color: #FFBC61;
+  background: url(../img/banner_talk_on.png) no-repeat right top, #FFBC61;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide .clink-3 {
+  background: url(../img/banner_travel.png) no-repeat right top, #ECEEF2;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-3:hover {
-  background-color: #4772E3;
+  background: url(../img/banner_travel_on.png) no-repeat right top, #4772E3;
   color: #fff;
 }
 .category .inner .category-pop {
@@ -462,6 +495,10 @@ body {
   font-weight: 400;
   text-align: center;
   font-size: 0.875rem;
+  line-height: 229%;
+}
+.footer .inner p:last-child {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
