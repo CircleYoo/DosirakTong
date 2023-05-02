@@ -422,12 +422,8 @@ body {
             transition: all .3s;
             overflow: hidden;
 
-            &:hover {
-                background-position: 120%;
-                // transform: scale(1.5);
-                
-            }
-            &:hover img {
+            // hover - 이미지 회전
+            &:hover .service-img img {
                     transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
             }
             
@@ -560,9 +556,38 @@ body {
                     padding: 1rem;
                     margin-top: 4rem;
                     
+                    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+                    overflow: hidden;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+                        background: $black;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+                    }
+
+                    &:hover {
+                        color: white;
+                        background: transparent;
+
+                        &::before {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+
                     i {
                         margin-left: 2.5rem;
                     }
+                    
                 }
             }
         }
