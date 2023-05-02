@@ -625,7 +625,6 @@ body {
                     height: initial;
                     
                     a.category-link {
-                        // background: $gray;
                         border-radius: 2rem;
                         display: flex;
                         gap: 1rem;
@@ -651,10 +650,42 @@ body {
                         }
 
                         div.category-link {
-                            text-transform: uppercase;
-                            font-weight: 500;
-                            font-size: 0.875rem;
                             margin-top: 3rem;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            align-items: center;
+
+                            span {
+                                text-transform: uppercase;
+                                font-weight: 500;
+                                font-size: 0.875rem;
+                            }
+
+                            div {
+                                // hover효과
+                                position: relative;
+                                width: 1rem;
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    height: 1px;
+                                    width: 0;
+                                    background: $black;
+                                    transition: width .25s ease-out;
+
+                                }
+                            }
+                        }
+                        &:hover div.category-link div {
+                            &::after {
+                                    position: absolute;
+                                    content: "";
+                                    height: 1px;
+                                    width: 100%;
+                                    background: $black;
+                                }
                         }
                     }
 

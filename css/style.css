@@ -529,10 +529,35 @@ body {
   letter-spacing: -0.02em;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link div.category-link {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link div.category-link span {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.875rem;
-  margin-top: 3rem;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link div.category-link div {
+  position: relative;
+  width: 1rem;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link div.category-link div::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0;
+  background: #333;
+  transition: width 0.25s ease-out;
+}
+.category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link:hover div.category-link div::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #333;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1 {
   background: url(../img/banner_member.png) no-repeat right top, #ECEEF2;
