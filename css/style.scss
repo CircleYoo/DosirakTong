@@ -689,20 +689,25 @@ body {
                         }
                     }
 
+                    // 같은 경로 : 배경이미지 설정하기
+                    @mixin bg($name, $path: "../img/", $format: "png") {
+                        background: url("#{$path}#{$name}.#{$format}") no-repeat right top, $gray;
+                    }
+
                     .clink-1 {
-                        background: url(../img/banner_member.png) no-repeat right top, $gray;
+                        @include bg('banner_member');
                         &:hover {
                             background: url(../img/banner_member_on.png) no-repeat right top, $sub-color;
                         }
                     }
                     .clink-2 {
-                        background: url(../img/banner_talk.png) no-repeat right top, $gray;
+                        @include bg('banner_talk');
                         &:hover {
                             background: url(../img/banner_talk_on.png) no-repeat right top, $point-color;
                         }
                     }
                     .clink-3 {
-                        background: url(../img/banner_travel.png) no-repeat right top, $gray;
+                        @include bg('banner_travel');
                         &:hover {
                             background: url(../img/banner_travel_on.png) no-repeat right top,
                             $main-color;

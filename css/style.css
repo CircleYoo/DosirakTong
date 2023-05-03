@@ -560,19 +560,19 @@ body {
   background: #333;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1 {
-  background: url(../img/banner_member.png) no-repeat right top, #ECEEF2;
+  background: url("../img/banner_member.png") no-repeat right top, #ECEEF2;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1:hover {
   background: url(../img/banner_member_on.png) no-repeat right top, #84CBFF;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-2 {
-  background: url(../img/banner_talk.png) no-repeat right top, #ECEEF2;
+  background: url("../img/banner_talk.png") no-repeat right top, #ECEEF2;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-2:hover {
   background: url(../img/banner_talk_on.png) no-repeat right top, #FFBC61;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-3 {
-  background: url(../img/banner_travel.png) no-repeat right top, #ECEEF2;
+  background: url("../img/banner_travel.png") no-repeat right top, #ECEEF2;
 }
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-3:hover {
   background: url(../img/banner_travel_on.png) no-repeat right top, #4772E3;
