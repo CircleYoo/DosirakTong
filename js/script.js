@@ -6,7 +6,7 @@ window.onload = function () {
 
   // Waypoint 활용
   // 스크롤이 될 때, 하고싶은 동작 구현 가능.
-  let goTop = document.querySelector(".goTop");
+    let goTop = document.querySelector(".goTop");
 
   // 스크롤의 위치에 따른 div 비교대상
   let visual = document.querySelector(".service");
