@@ -559,6 +559,13 @@ body {
   width: 100%;
   background: #333;
 }
+.category .inner .swcategory .swiper-wrapper .swiper-slide .clink-3:hover div.category-link div::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #fff;
+}
 .category .inner .swcategory .swiper-wrapper .swiper-slide .clink-1 {
   background: url("../img/banner_member.png") no-repeat right top, #ECEEF2;
 }

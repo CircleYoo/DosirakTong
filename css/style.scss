@@ -688,6 +688,15 @@ body {
                                 }
                         }
                     }
+                    .clink-3:hover div.category-link div {
+                        &::after {
+                                position: absolute;
+                                content: "";
+                                height: 1px;
+                                width: 100%;
+                                background: #fff;
+                            }
+                    }
 
                     // 같은 경로 : 배경이미지 설정하기
                     @mixin bg($name, $path: "../img/", $format: "png") {
