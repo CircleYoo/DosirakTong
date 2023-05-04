@@ -9,6 +9,7 @@ window.onload = function () {
     let goTop = document.querySelector(".goTop");
 
   // 스크롤의 위치에 따른 div 비교대상
+  // goTop 버튼 표시
   let visual = document.querySelector(".service");
   new Waypoint({
       element: visual,
@@ -16,6 +17,7 @@ window.onload = function () {
         // dir의 값에 따라 처리
           if(dir === "down") {
             goTop.classList.add("active");
+            console.log(dir)
           }else {
             goTop.classList.remove("active");
           }
@@ -24,6 +26,24 @@ window.onload = function () {
       offset: "50%"
   });
 
+  // 맨 아래에 닿으면 .goTop 위치 변경
+  let $footer = document.querySelector(".footer")
+  new Waypoint({
+    element: $footer,
+    handler: function (dir) {
+      if (dir === "down") {
+        goTop.classList.add("bottom");
+      } else {
+        goTop.classList.remove("bottom");
+      }
+    },
+    offset: "90%"
+  })
+
+  // .goTop click시, 화면 최상단으로 이동
+  goTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
 
   let htmlTag = document.querySelector("html");
   // 모바일 메뉴 버튼 처리
@@ -54,6 +74,7 @@ window.onload = function () {
       item.classList.add("active");
     });
   });
+
   // 화면 리사이징 처리
   window.addEventListener("resize", function () {
     // window 의 화면 안쪽 너비 체크
@@ -131,7 +152,7 @@ window.onload = function () {
     if (req.readyState === XMLHttpRequest.DONE) {
       // 아래 구문을 반드시 체크하자
       const dataArr = JSON.parse(req.response);
-      console.log(dataArr);
+      // console.log(dataArr);
     }
   };
   xhttp.open("GET", "data.json");
@@ -176,7 +197,7 @@ window.onload = function () {
 
   // 타이틀 내용 보여주기
   function showVT(_data, _index) {
-    console.log(_data);
+    // console.log(_data);
     swTitle.innerHTML = _data.title;
     swTxt.innerHTML = _data.txt;
     if (_data.link === "no") {
@@ -227,8 +248,9 @@ window.onload = function () {
   });
   // 슬라이드가 변경될 때마다 하고 싶은 일 진행
   swVisual.on("slideChange", function () {
-    console.log("진짜 html 태그의 순서", this.realIndex);
-    console.log("모션이 되는 순서", this.activeIndex);
+    // console.log("진짜 html 태그의 순서", this.realIndex);
+    // console.log("모션이 되는 순서", this.activeIndex);
+    
     // 텍스트를 수정한다.;
     showVT(visualData[this.realIndex], swVisual.realIndex); // default
   });

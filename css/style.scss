@@ -84,6 +84,14 @@ body {
     i {
         color: #fff;
     }
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.bottom {
+        bottom: 13.75rem
+    }
 }
 
 /* 공통요소 : 2번 이상 활용하는 경우 */
