@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>도시락으로 다 통한다, 해외 데이터는 도시락통</title>
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="js/aos/aos.css">
+
   <!-- SEO 세팅 -->
   <!-- SEO란?  -->
   <meta name="title" content="도시락으로 다 통한다, 해외데이터는 도시락통" />
@@ -58,17 +61,18 @@
   <script src="js/prefixfree.min.js"></script>
   <!-- Viewport 지원 : 나중에 삭제 -->
   <script src="js/respond.min.js"></script>
-  <!--  사용자 스크립트 -->
-  <script src="js/script.js"></script>
+
 </head>
 
 <body>
   <!-- 위로가기 -->
-  <button class="goTop">위로가기</button>
+  <button class="goTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
   <!-- 메인 레이아웃 용도 : 관례 -->
   <div class="wrap">
     <!--  header  -->
-    <header class="header">
+    <header class="header" data-aos="fade-down" data-aos-duration="1000">
       <!-- 데스크탑 메뉴 -->
       <div class="inner">
         <!-- 로고는 a 태그 -->
@@ -158,21 +162,21 @@
         <div class="swvisual-control">
           <div class="inner">
             <!-- 슬라이드 타이틀 -->
-            <h2 class="swvisual-title">도시락유심</h2>
+            <h2 class="swvisual-title" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="100">도시락유심</h2>
             <!-- 슬라이드 설명글 -->
-            <p class="swvisual-txt">도시락으로 다 통한다, 해외데이터는 도시락통</p>
-            <a href="#" class="swvisual-link">
+            <p class="swvisual-txt" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="200">도시락으로 다 통한다, 해외데이터는 도시락통</p>
+            <a href="#" class="swvisual-link" data-aos="fade-left" data-aos-duration="1500"  data-aos-delay="300">
               <p>READ MORE</p>
               <i class="xi-long-arrow-right"></i>
             </a>
             <div class="swvisual-sub">
               <!-- 좌측/우측 이동버튼 -->
-              <div class="swvisual-btn-wrap">
+              <div class="swvisual-btn-wrap" data-aos="fade-up" data-aos-duration="1500">
                 <button class="swvisual-btn swvisual-prev"><i class="xi-arrow-left"></i></button>
                 <button class="swvisual-btn swvisual-next"><i class="xi-arrow-right"></i></button>
               </div>
               <!-- 네비게이션 -->
-              <div class="swvisual-navi">
+              <div class="swvisual-navi" data-aos="fade-up" data-aos-duration="1500">
                 <ul class="swvisual-list">
                   <!-- js코드 html 삽입 -->
                   <!-- <li>1</li>
@@ -181,7 +185,7 @@
                     <li>4</li> -->
                 </ul>
               </div>
-              <div class="swvisual-dir">
+              <div class="swvisual-dir" data-aos="fade-left" data-aos-duration="1500">
                 <div></div>
                 <p>scroll down</p>
               </div>
@@ -195,9 +199,9 @@
     <!--  서비스  -->
     <section class="service">
       <div class="inner">
-        <h2><span class="main-color">도시락통</span> 서비스 둘러보기</h2>
-        <div class="service-contents">
-          <a href="#" class="service-link service-link-1">
+        <h2 data-aos="fade-down" data-aos-duration="1000"><span class="main-color">도시락통</span> 서비스 둘러보기</h2>
+        <div class="service-contents" data-aos="fade-up" data-aos-duration="1000" >
+          <a href="#" class="service-link service-link-1" >
             <div class="service-inner">
               <h4 class="service-title">와이파이도시락</h4>
               <p class="service-desc">최대 5대 동시접속, <br>대용량 데이터로 해외에서도 빵빵!</p>
@@ -243,21 +247,21 @@
       <div class="inner">
         <div class="info-contents">
           <div class="info-left">
-            <h3 class="info-title">
+            <h3 class="info-title" data-aos="fade-right" data-aos-duration="1000">
               통신 서비스를 하나로 <br>해외여행 갈 땐 <span class="main-color">도시락통</span>
             </h3>
           </div>
           <div class="info-right">
-            <h4 class="info-desc">
+            <h4 class="info-desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
               연결은 쉽게, 여행은 즐겁게
             </h4>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
               국내외 어디서나 끊김없이 든든한 네트워크를 제공하자는 모토를 가지고 2004년, (주)와일드모바일은 설립되었습니다. 더 나은 서비스 제공을 위해 지속적으로 연구, 개발하여 앞으로도 편리하고 즐거운 여행의 파트너가 되겠습니다.
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
               언제, 어디로, 누구와 함께 떠나든 가장 좋은 선택지는 도시락통에 있습니다. 당신은 이제 ‘여행’ 그 자체에만 집중하세요.
             </p>
-            <a href="#" class="info-link">
+            <a href="#" class="info-link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="3 00">
               about us
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -270,14 +274,14 @@
     <!--  서비스 카테고리  -->
     <section class="category">
       <div class="inner">
-        <div class="category-desc">
+        <div class="category-desc" data-aos="fade-right" data-aos-duration="1500">
           <p>Our Services</p>
           <h3>국내외 어디서나 끊김 없는 네트워크 서비스를 제공합니다</h3>
         </div>
         <!-- Swiper -->
         <div class="swiper swcategory">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000">
               <a href="#" class="category-link clink-1">
                 <h6 class="category-title">도시락멤버스</h6>
                 <p class="category-desc">
@@ -291,9 +295,9 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
-              <a href="#" class="category-link clink-2">
-                <h6 class="category-title">도시락톡</h6>
+            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1500">
+              <a href="#" class="category-link clink-2" >
+                <h6 class="category-title" >도시락톡</h6>
                 <p class="category-desc">
                   로밍전화 요금 부담을 확 낮춰주는 <br>
                   해외로밍전화 앱 서비스. <br>
@@ -305,7 +309,7 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
               <a href="#" class="category-link clink-3">
                 <h6 class="category-title">여행보험도시락</h6>
                 <p class="category-desc">
@@ -342,5 +346,9 @@
     <!--  //footer  -->
   </div>
 </body>
+  <!--  사용자 스크립트 -->
+  <script src="js/script.js"></script>
 
+  <!-- AOS -->
+  <script src="js/aos/aos.js"></script>
 </html>

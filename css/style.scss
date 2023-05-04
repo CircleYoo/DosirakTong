@@ -69,16 +69,21 @@ body {
 /* 위로가기 */
 .goTop {
     position: fixed;
-    right: 50px;
-    bottom: 100px;
+    right: 3.6458vw;
+    bottom: 3.6458vw;
     z-index: 9999;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: 0;
-    opacity: 0;
+    border-radius: 0.5rem;
+    opacity: 1;
     background-color: $main-color;
     cursor: pointer;
     transition: all 0.5s;
+
+    i {
+        color: #fff;
+    }
 }
 
 /* 공통요소 : 2번 이상 활용하는 경우 */
@@ -688,13 +693,14 @@ body {
                                 }
                         }
                     }
+                    // clink-3만 다른 색상 설정
                     .clink-3:hover div.category-link div {
                         &::after {
                                 position: absolute;
                                 content: "";
                                 height: 1px;
                                 width: 100%;
-                                background: #fff;
+                                background: #fff !important;
                             }
                     }
 

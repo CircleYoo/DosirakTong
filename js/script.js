@@ -1,24 +1,28 @@
 // 이미지 및 리소스 로드 후 코드실행
 window.onload = function () {
 
-// Waypoint 활용
-let goTop = document.querySelector(".goTop");
+  // AOS 세팅
+  AOS.init();
 
-// 스크롤의 위치에 따른 div 비교대상
-let visual = document.querySelector(".service");
-new Waypoint({
-    element: visual,
-    handler: function (dir) {
-      // dir의 값에 따라 처리
-        if(dir === "down") {
-          goTop.classList.add("active");
-        }else {
-          goTop.classList.remove("active");
-        }
-    },
-    // 해당 div의 화면상에 얼마나 보이는가?
-    offset: "50%"
-});
+  // Waypoint 활용
+  // 스크롤이 될 때, 하고싶은 동작 구현 가능.
+  let goTop = document.querySelector(".goTop");
+
+  // 스크롤의 위치에 따른 div 비교대상
+  let visual = document.querySelector(".service");
+  new Waypoint({
+      element: visual,
+      handler: function (dir) {
+        // dir의 값에 따라 처리
+          if(dir === "down") {
+            goTop.classList.add("active");
+          }else {
+            goTop.classList.remove("active");
+          }
+      },
+      // 해당 div의 화면상에 얼마나 보이는가?
+      offset: "50%"
+  });
 
 
   let htmlTag = document.querySelector("html");
