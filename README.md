@@ -2,6 +2,8 @@
 도시락통 - 웹사이트 반응형 리디자인 <br/>
 **배포주소** : https://exquisite-phoenix-acdcd0.netlify.app <br/>
 
+![poster](https://github.com/CircleYoo/DosirakTong/blob/master/assets/DosirakTong.jpg)
+
 ### 💼 작업기간
 > 1인 제작 <br/>
   2023.04.18 ~ 2023.05.01
