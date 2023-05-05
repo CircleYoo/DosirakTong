@@ -1,0 +1,75 @@
+// npx sass --watch css/style-768.scss css/style-768.css
+$black: #333;
+$gray: #ECEEF2;
+$dark-gray: #D0D3DA;
+$main-color: #4772E3;
+$point-color: #FFBC61;
+$sub-color: #84CBFF;
+
+$header-gap: 3.6458vw;
+$ver-gap: 3.7760vw;
+$hori-gap: 10rem;
+
+$con-title: 3rem;
+
+.goTop {
+    right: $ver-gap;
+    bottom: 4rem;
+}
+.header {
+    height: 5.5rem;
+}
+
+.visual {
+    padding: 5.5rem 0 0;
+
+    .swvisual {
+        border-radius: 0;
+
+        .swvisual-control {
+            .swvisual-sub {
+                bottom: 6rem;
+            }
+        }
+    }
+}
+
+.service {
+    .inner {
+        margin: $hori-gap $ver-gap;
+
+        .service-contents {
+                grid-template-rows: repeat(3, 1fr);
+                height: 64.375rem;
+                grid-gap: 1.25rem;
+        
+                .service-link {
+                    .service-inner {
+                        padding: 6.25vw;
+                    }
+        
+                    &-1 {
+                        grid-row: auto;
+
+                        .service-img {
+                            img {
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+.info {
+    .inner {
+        padding: 0 $ver-gap $hori-gap;
+    }
+}
+
+.category {
+    .inner {
+        padding: 0 $ver-gap $hori-gap;
+    }
+}

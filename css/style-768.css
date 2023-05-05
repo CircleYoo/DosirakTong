@@ -1,0 +1,46 @@
+.goTop {
+  right: 3.776vw;
+  bottom: 4rem;
+}
+
+.header {
+  height: 5.5rem;
+}
+
+.visual {
+  padding: 5.5rem 0 0;
+}
+.visual .swvisual {
+  border-radius: 0;
+}
+.visual .swvisual .swvisual-control .swvisual-sub {
+  bottom: 6rem;
+}
+
+.service .inner {
+  margin: 10rem 3.776vw;
+}
+.service .inner .service-contents {
+  grid-template-rows: repeat(3, 1fr);
+  height: 64.375rem;
+  grid-gap: 1.25rem;
+}
+.service .inner .service-contents .service-link .service-inner {
+  padding: 6.25vw;
+}
+.service .inner .service-contents .service-link-1 {
+  grid-row: auto;
+}
+.service .inner .service-contents .service-link-1 .service-img img {
+  height: auto;
+}
+
+.info .inner {
+  padding: 0 3.776vw 10rem;
+}
+
+.category .inner {
+  padding: 0 3.776vw 10rem;
+}
+
+/*# sourceMappingURL=style-768.css.map */
