@@ -391,8 +391,8 @@ body {
                         text-transform: uppercase;
 
                         width: max-content;
-                        // word-break: keep-all;
-                        // word-wrap: normal;
+                        word-break: keep-all;
+                        word-wrap: normal;
                         transform: rotate(-90deg);
                         @include keyframes(upDown) {
                         
@@ -571,6 +571,7 @@ body {
                     font-size: 1.125rem;
                     line-height: 156%;
                     text-align: justify;
+                    word-break: break-all;
                     margin-bottom: 1.5rem;
                 }
 

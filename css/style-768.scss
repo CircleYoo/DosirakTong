@@ -10,7 +10,7 @@ $header-gap: 3.6458vw;
 $ver-gap: 3.7760vw;
 $hori-gap: 10rem;
 
-$con-title: 3rem;
+$con-title: clamp(2.5rem, 6.25vw, 3rem);
 
 .goTop {
     right: $ver-gap;
@@ -27,8 +27,35 @@ $con-title: 3rem;
         border-radius: 0;
 
         .swvisual-control {
+            .inner {
+                .swvisual-title {
+                    font-size: clamp(2.5rem, 9.3750vw, 5rem);
+                }
+            }
             .swvisual-sub {
+                grid-template-columns: clamp(6.5rem, 17.5vw, 9rem) 1fr clamp(3.5rem, 9.3750vw, 5rem);
                 bottom: 6rem;
+                gap: 6.25vw;
+
+                .swvisual-btn-wrap {
+                    width: clamp(6.5rem, 17.5vw, 9rem);
+
+                    .swvisual-btn {
+                        width: clamp(3.5rem, 9.3750vw, 5rem );
+                        height: clamp(3.5rem, 9.3750vw, 5rem );
+                    }
+                }
+                
+                .swvisual-dir {
+                    div {
+                        width: clamp(3.5rem, 9.3750vw, 5rem );
+                        height: clamp(3.5rem, 9.3750vw, 5rem );
+                    }
+
+                    p {
+                        left: min(-10%, -35%);
+                    }
+                }
             }
         }
     }
@@ -38,6 +65,9 @@ $con-title: 3rem;
     .inner {
         margin: $hori-gap $ver-gap;
 
+        h2 {
+            font-size: $con-title;
+        }
         .service-contents {
                 grid-template-rows: repeat(3, 1fr);
                 height: 64.375rem;
@@ -65,11 +95,25 @@ $con-title: 3rem;
 .info {
     .inner {
         padding: 0 $ver-gap $hori-gap;
+
+        .info-contents {
+            .info-title {
+                font-size: clamp(2.125rem, 5.2083vw, 2.5rem);
+            }
+        
+        }
     }
 }
 
 .category {
     .inner {
         padding: 0 $ver-gap $hori-gap;
+
+        .category-desc {
+            
+            h3 {
+                font-size: $con-title;
+            }
+        }
     }
 }

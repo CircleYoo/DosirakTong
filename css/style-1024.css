@@ -132,5 +132,11 @@
 .category .inner {
   padding: 0 16.9922vw 10rem;
 }
+.category .inner .category-desc {
+  word-break: break-all;
+}
+.category .inner .category-desc .brNone {
+  display: none;
+}
 
 /*# sourceMappingURL=style-1024.css.map */

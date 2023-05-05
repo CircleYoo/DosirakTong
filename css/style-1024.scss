@@ -188,5 +188,13 @@ $con-title: 3rem;
 .category {
     .inner {
         padding: 0 $ver-gap $hori-gap;
+
+        .category-desc {
+            word-break: break-all;
+            
+            .brNone {
+                display: none;
+            }
+        }
     }
 }

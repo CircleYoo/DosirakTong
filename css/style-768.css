@@ -13,12 +13,34 @@
 .visual .swvisual {
   border-radius: 0;
 }
+.visual .swvisual .swvisual-control .inner .swvisual-title {
+  font-size: clamp(2.5rem, 9.375vw, 5rem);
+}
 .visual .swvisual .swvisual-control .swvisual-sub {
+  grid-template-columns: clamp(6.5rem, 17.5vw, 9rem) 1fr clamp(3.5rem, 9.375vw, 5rem);
   bottom: 6rem;
+  gap: 6.25vw;
+}
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap {
+  width: clamp(6.5rem, 17.5vw, 9rem);
+}
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap .swvisual-btn {
+  width: clamp(3.5rem, 9.375vw, 5rem);
+  height: clamp(3.5rem, 9.375vw, 5rem);
+}
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-dir div {
+  width: clamp(3.5rem, 9.375vw, 5rem);
+  height: clamp(3.5rem, 9.375vw, 5rem);
+}
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-dir p {
+  left: -35%;
 }
 
 .service .inner {
   margin: 10rem 3.776vw;
+}
+.service .inner h2 {
+  font-size: clamp(2.5rem, 6.25vw, 3rem);
 }
 .service .inner .service-contents {
   grid-template-rows: repeat(3, 1fr);
@@ -38,9 +60,15 @@
 .info .inner {
   padding: 0 3.776vw 10rem;
 }
+.info .inner .info-contents .info-title {
+  font-size: clamp(2.125rem, 5.2083vw, 2.5rem);
+}
 
 .category .inner {
   padding: 0 3.776vw 10rem;
+}
+.category .inner .category-desc h3 {
+  font-size: clamp(2.5rem, 6.25vw, 3rem);
 }
 
 /*# sourceMappingURL=style-768.css.map */

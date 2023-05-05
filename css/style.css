@@ -319,6 +319,8 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   width: max-content;
+  word-break: keep-all;
+  word-wrap: normal;
   transform: rotate(-90deg);
   animation: upDown 1.5s ease-in-out infinite;
 }
@@ -463,6 +465,7 @@ body {
   font-size: 1.125rem;
   line-height: 156%;
   text-align: justify;
+  word-break: break-all;
   margin-bottom: 1.5rem;
 }
 .info .inner .info-contents .info-right .info-link {
