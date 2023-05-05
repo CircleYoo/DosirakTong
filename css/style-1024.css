@@ -1,3 +1,6 @@
+.header {
+  height: 4.5rem;
+}
 .header .inner .nav {
   display: flex;
   align-items: center;
@@ -70,11 +73,29 @@
 }
 
 .visual {
-  margin: 5.5rem 2.1875vw 0;
-  height: 100vh;
+  padding: 4.5rem 1.5625vw 1.5625vw;
 }
-.visual .swvisual-control .inner {
-  padding: 0 3.75vw;
+.visual .swvisual .swvisual-control .inner {
+  margin: 0 7.8125vw;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-title {
+  font-size: 3.75rem;
+}
+.visual .swvisual .swvisual-control .inner .swvisual-txt {
+  font-size: 1.25rem;
+}
+.visual .swvisual .swvisual-control .swvisual-sub {
+  bottom: 4rem;
+  margin: 0 7.8125vw;
+}
+
+.service .inner {
+  margin: 10rem 16.9922vw;
+}
+.service .inner .service-contents {
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: 86.25rem;
 }
 
 /*# sourceMappingURL=style-1024.css.map */

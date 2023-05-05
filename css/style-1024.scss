@@ -7,8 +7,8 @@ $point-color: #FFBC61;
 $sub-color: #84CBFF;
 
 $header-gap: 3.6458vw;
-$ver-gap: 13.0208vw;
-$hori-gap: 12rem;
+$ver-gap: 16.9922vw;
+$hori-gap: 10rem;
 
 $con-title: 3rem;
 
@@ -109,13 +109,36 @@ $con-title: 3rem;
 }
 
 .visual {
-    padding: 4.5rem 2.1875vw 2.1875vw;
+    padding: 4.5rem 1.5625vw 1.5625vw;
     
     .swvisual {
-        &-control {
+        .swvisual-control {
             .inner {
-                padding: 0 3.75vw;
+                margin: 0 7.8125vw;
+
+                .swvisual-title {
+                    font-size: 3.75rem;
+                }
+
+                .swvisual-txt {
+                    font-size: 1.25rem;
+                }
             }
+            .swvisual-sub {
+                bottom: 4rem;
+                margin: 0 7.8125vw;
+            }
+        }
+    }
+}
+.service {
+    .inner {
+        margin: $hori-gap $ver-gap;
+
+        .service-contents {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr 1fr;
+            height: 86.25rem;
         }
     }
 }
