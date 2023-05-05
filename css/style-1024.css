@@ -1,3 +1,8 @@
+.goTop {
+  right: 1rem;
+  bottom: 1rem;
+}
+
 .header {
   height: 4.5rem;
 }
@@ -96,6 +101,36 @@
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr 1fr;
   height: 86.25rem;
+}
+.service .inner .service-contents .service-link .service-inner {
+  padding: 4.6875vw;
+}
+.service .inner .service-contents .service-link-1 {
+  grid-row: auto;
+}
+
+.info .inner {
+  padding: 0 16.9922vw 10rem;
+}
+.info .inner .info-contents {
+  grid-template-columns: auto;
+  grid-gap: 3rem;
+}
+.info .inner .info-contents .info-title {
+  font-size: 2.5rem;
+}
+.info .inner .info-contents .info-right {
+  margin-right: auto;
+}
+.info .inner .info-contents .info-right .info-desc {
+  font-size: 1.5rem;
+}
+.info .inner .info-contents .info-right .info-link {
+  margin-top: 2rem;
+}
+
+.category .inner {
+  padding: 0 16.9922vw 10rem;
 }
 
 /*# sourceMappingURL=style-1024.css.map */
