@@ -120,7 +120,7 @@ body {
     top: 0;
     right: 0;
     width: 100%;
-    height: 5.5rem;
+    height: 5rem;
     /* header는 무조건 z-index 쓰자 : 최댓값으로 */
     z-index: 9999;
     background-color: #fff;
@@ -207,7 +207,7 @@ body {
     // height: 60rem;
     height: 100vh;
     transition: height 0.5s;
-    padding: 5.5rem 2.0833vw 2.0833vw;
+    padding: 5rem 2.0833vw 2.0833vw;
 
     .swvisual {
         width: 100%;
@@ -293,7 +293,7 @@ body {
                 position: absolute;
                 width: -webkit-fill-available;
                 left: 0;
-                bottom: 12.5rem;
+                bottom: 6.5rem;
 
 
                 // 좌/우 이동버튼

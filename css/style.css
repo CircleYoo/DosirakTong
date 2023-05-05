@@ -87,7 +87,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
-  height: 5.5rem;
+  height: 5rem;
   /* header는 무조건 z-index 쓰자 : 최댓값으로 */
   z-index: 9999;
   background-color: #fff;
@@ -161,7 +161,7 @@ body {
   position: relative;
   height: 100vh;
   transition: height 0.5s;
-  padding: 5.5rem 2.0833vw 2.0833vw;
+  padding: 5rem 2.0833vw 2.0833vw;
 }
 .visual .swvisual {
   width: 100%;
@@ -237,7 +237,7 @@ body {
   position: absolute;
   width: -webkit-fill-available;
   left: 0;
-  bottom: 12.5rem;
+  bottom: 6.5rem;
 }
 .visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap {
   position: relative;
@@ -529,7 +529,6 @@ body {
 .category .inner .swcategory .swiper-wrapper .swiper-slide a.category-link {
   border-radius: 2rem;
   display: flex;
-  gap: 1rem;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
