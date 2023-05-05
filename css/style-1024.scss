@@ -13,6 +13,8 @@ $hori-gap: 12rem;
 $con-title: 3rem;
 
 .header {
+    height: 4.5rem;
+
     .inner {
         .nav {
             display: flex;
@@ -107,8 +109,7 @@ $con-title: 3rem;
 }
 
 .visual {
-    margin: 5.5rem 2.1875vw 0;
-    height: 100vh;
+    padding: 4.5rem 2.1875vw 2.1875vw;
     
     .swvisual {
         &-control {

@@ -186,6 +186,10 @@ body {
                     }
                 }
             }
+
+            .mb-bt {
+                display: none;
+            }
         }
     }
     .mb-nav {
@@ -195,15 +199,15 @@ body {
 
 // visual style sheet
 .visual {
-    background: url("../img/main_visual_1.jpg") no-repeat center;
     background-size: cover;
     border-radius: 2rem;
     display: block;
     position: relative;
     // width: 100%;
-    height: 60rem;
+    // height: 60rem;
+    height: 100vh;
     transition: height 0.5s;
-    margin: 5.5rem 2.0833vw 0;
+    padding: 5.5rem 2.0833vw 2.0833vw;
 
     .swvisual {
         width: 100%;
@@ -249,8 +253,10 @@ body {
 
             .inner {
                 color: #fff;
-                padding: 0 11vw;
+                position: relative;
                 letter-spacing: -0.02em;
+                margin: 0 11vw;
+                height: 50%;
 
                 .swvisual-title {
                     font-weight: 700;
@@ -260,6 +266,7 @@ body {
                 .swvisual-txt {
                     font-weight: 400;
                     font-size: 1.75rem;
+                    line-height: 125%
                 }
                 .swvisual-link {
                     display: flex;
@@ -274,129 +281,135 @@ body {
                     }
 
                 }
-                .swvisual-sub {
-                    display: grid;
-                    grid-template-columns: 9rem 1fr 5rem;
-                    gap: 3rem;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding-top: 9.5rem;
+            }
+            .swvisual-sub {
+                display: grid;
+                grid-template-columns: 9rem 1fr 5rem;
+                gap: 3rem;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 11vw;
+
+                position: absolute;
+                width: -webkit-fill-available;
+                left: 0;
+                bottom: 12.5rem;
 
 
-                    // 좌/우 이동버튼
-                    .swvisual-btn-wrap {
-                        position: relative;
-                        width: 9rem;
+                // 좌/우 이동버튼
+                .swvisual-btn-wrap {
+                    position: relative;
+                    width: 9rem;
 
-                        .swvisual-btn {
-                            cursor: pointer;
-                            width: 5rem;
-                            height: 5rem;
-                            border: 1px solid rgba(255, 255, 255, 0.4);
-                            border-radius: 50%;
-                            background-color: transparent;
-                            color: #fff;
-                            font-size: 1.5rem;
+                    .swvisual-btn {
+                        cursor: pointer;
+                        width: 5rem;
+                        height: 5rem;
+                        border: 1px solid rgba(255, 255, 255, 0.4);
+                        border-radius: 50%;
+                        background-color: transparent;
+                        color: #fff;
+                        font-size: 1.5rem;
 
-                            &:last-child{
-                                position: absolute;
-                                right: 1%;
-                            }
+                        &:last-child{
+                            position: absolute;
+                            right: 1%;
                         }
                     }
+                }
 
-                    // 네비게이션
-                    .swvisual-link.active {
-                        visibility: hidden;
-                    }
-                    .swvisual-list {
-                        display: flex;
+                // 네비게이션
+                .swvisual-link.active {
+                    visibility: hidden;
+                }
+                .swvisual-list {
+                    display: flex;
 
-                        li.active {
-                                color: rgba(255, 255, 255, 1);
-
-                                &::after {
-                                    width: 100%;
-                                    transition: width 2s;
-                                    /* 1초마다 그림이 바뀌기 때문에 동일하게 맞춰준다. */
-                                }
-                            }
-
-                        li {
-                            position: relative;
-                            display: block;
-                            width: 25%;
-                            height: 1.75rem;
-                            color: rgba(255, 255, 255, 0.3);
-                            padding: 0 0.625rem;
-                            cursor: pointer;
-                            transition: color 0.3s;
-
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                width: 100%;
-                                height: 2px;
-                                background: rgba(255, 255, 255, 0.3);
-                            }
+                    li.active {
+                            color: rgba(255, 255, 255, 1);
 
                             &::after {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                width: 0%;
-                                height: 2px;
-                                background: rgba(255, 255, 255, 1);
+                                width: 100%;
+                                transition: width 2s;
+                                /* 1초마다 그림이 바뀌기 때문에 동일하게 맞춰준다. */
                             }
                         }
+
+                    li {
+                        position: relative;
+                        display: block;
+                        width: 25%;
+                        height: 1.75rem;
+                        color: rgba(255, 255, 255, 0.3);
+                        padding: 0 0.625rem;
+                        cursor: pointer;
+                        transition: color 0.3s;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: rgba(255, 255, 255, 0.3);
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 0%;
+                            height: 2px;
+                            background: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+
+                // scroll down
+                .swvisual-dir{
+                    position: relative;
+
+
+                    div {
+                        width: 5rem;
+                        height: 5rem;
+                        background-color: $gray;
+                        opacity: 0.3;
+                        border-radius: 50%;
                     }
 
-                    // scroll down
-                    .swvisual-dir{
-                        position: relative;
+                    p {
+                        position: absolute;
+                        top: 0;
+                        left: -10%;
+                        color: #fff;
+                        letter-spacing: 0.2em;
+                        font-size: 0.625rem;
+                        font-weight: 400;
+                        text-transform: uppercase;
 
-
-                        div {
-                            width: 5rem;
-                            height: 5rem;
-                            background-color: $gray;
-                            opacity: 0.3;
-                            border-radius: 50%;
-                        }
-
-                        p {
-                            text-transform: uppercase;
-                            letter-spacing: 0.2em;
-                            font-size: 0.625rem;
-                            font-weight: 400;
-                            position: absolute;
-                            top: 0;
-                            left: -10%;
-
-                            width: max-content;
-                            // word-break: keep-all;
-                            // word-wrap: normal;
-                            transform: rotate(-90deg);
-                            @include keyframes(upDown) {
-                            
-                                    0%,
-                                    100% {
-                                        transform: rotate(-90deg) translate(15%);
-                                        opacity: 0.8;
-                                    }
-                            
-                                    50% {
-                                        transform: rotate(-90deg) translate(0);
-                                        opacity: 1;
-                                    }
+                        width: max-content;
+                        // word-break: keep-all;
+                        // word-wrap: normal;
+                        transform: rotate(-90deg);
+                        @include keyframes(upDown) {
+                        
+                                0%,
+                                100% {
+                                    transform: rotate(-90deg) translate(15%);
+                                    opacity: 0.8;
                                 }
+                        
+                                50% {
+                                    transform: rotate(-90deg) translate(0);
+                                    opacity: 1;
+                                }
+                            }
 
-                            @include animate( upDown, 1.5s, ease-in-out, infinite)
+                        @include animate( upDown, 1.5s, ease-in-out, infinite)
 
-                        }
                     }
                 }
             }

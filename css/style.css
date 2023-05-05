@@ -147,19 +147,21 @@ body {
 .header .inner .nav .gnb a:hover span::after {
   width: 100%;
 }
+.header .inner .nav .mb-bt {
+  display: none;
+}
 .header .mb-nav {
   display: none;
 }
 
 .visual {
-  background: url("../img/main_visual_1.jpg") no-repeat center;
   background-size: cover;
   border-radius: 2rem;
   display: block;
   position: relative;
-  height: 60rem;
+  height: 100vh;
   transition: height 0.5s;
-  margin: 5.5rem 2.0833vw 0;
+  padding: 5.5rem 2.0833vw 2.0833vw;
 }
 .visual .swvisual {
   width: 100%;
@@ -199,8 +201,10 @@ body {
 }
 .visual .swvisual .swvisual-control .inner {
   color: #fff;
-  padding: 0 11vw;
+  position: relative;
   letter-spacing: -0.02em;
+  margin: 0 11vw;
+  height: 50%;
 }
 .visual .swvisual .swvisual-control .inner .swvisual-title {
   font-weight: 700;
@@ -210,6 +214,7 @@ body {
 .visual .swvisual .swvisual-control .inner .swvisual-txt {
   font-weight: 400;
   font-size: 1.75rem;
+  line-height: 125%;
 }
 .visual .swvisual .swvisual-control .inner .swvisual-link {
   display: flex;
@@ -222,19 +227,23 @@ body {
   transition: transform 0.4s ease-out;
   transform: translateX(50%);
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub {
+.visual .swvisual .swvisual-control .swvisual-sub {
   display: grid;
   grid-template-columns: 9rem 1fr 5rem;
   gap: 3rem;
   justify-content: space-between;
   align-items: center;
-  padding-top: 9.5rem;
+  margin: 0 11vw;
+  position: absolute;
+  width: -webkit-fill-available;
+  left: 0;
+  bottom: 12.5rem;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap {
   position: relative;
   width: 9rem;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap .swvisual-btn {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap .swvisual-btn {
   cursor: pointer;
   width: 5rem;
   height: 5rem;
@@ -244,25 +253,25 @@ body {
   color: #fff;
   font-size: 1.5rem;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-btn-wrap .swvisual-btn:last-child {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-btn-wrap .swvisual-btn:last-child {
   position: absolute;
   right: 1%;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-link.active {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-link.active {
   visibility: hidden;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list {
   display: flex;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li.active {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list li.active {
   color: rgb(255, 255, 255);
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li.active::after {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list li.active::after {
   width: 100%;
   transition: width 2s;
   /* 1초마다 그림이 바뀌기 때문에 동일하게 맞춰준다. */
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list li {
   position: relative;
   display: block;
   width: 25%;
@@ -272,7 +281,7 @@ body {
   cursor: pointer;
   transition: color 0.3s;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li::before {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -281,7 +290,7 @@ body {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-list li::after {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-list li::after {
   content: "";
   position: absolute;
   left: 0;
@@ -290,24 +299,25 @@ body {
   height: 2px;
   background: rgb(255, 255, 255);
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-dir {
   position: relative;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir div {
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-dir div {
   width: 5rem;
   height: 5rem;
   background-color: #ECEEF2;
   opacity: 0.3;
   border-radius: 50%;
 }
-.visual .swvisual .swvisual-control .inner .swvisual-sub .swvisual-dir p {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.625rem;
-  font-weight: 400;
+.visual .swvisual .swvisual-control .swvisual-sub .swvisual-dir p {
   position: absolute;
   top: 0;
   left: -10%;
+  color: #fff;
+  letter-spacing: 0.2em;
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
   width: max-content;
   transform: rotate(-90deg);
   animation: upDown 1.5s ease-in-out infinite;
