@@ -82,6 +82,7 @@ body {
 .header {
   /* 메뉴가 상단에 고정해서 스크롤이 된다면 fixed */
   display: flex;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -158,7 +159,7 @@ body {
   position: relative;
   height: 60rem;
   transition: height 0.5s;
-  margin: 0 2.0833vw;
+  margin: 5.5rem 2.0833vw 0;
 }
 .visual .swvisual {
   width: 100%;
@@ -356,7 +357,7 @@ body {
 .service .service-contents .service-link .service-inner {
   display: grid;
   grid-template-columns: 1fr 3rem;
-  padding: 3rem;
+  padding: 2.5vw;
   gap: 0.5rem;
   position: absolute;
   bottom: 0;
