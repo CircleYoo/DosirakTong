@@ -14,8 +14,11 @@
   `SCSS`
 
 ## ✔ 주요기능
-* AOS, Waypoint.js를 사용한 스크롤 애니메이션
+* AOS, Waypoint.js를 사용한 스크롤 애니메이션 <br/>
 
-**VISUAL**
+**HEADER**
+* 미디어 해상도에 따른 구조 변경 ( 1920px / 1024px~ ) <br/>
+
+**MAIN VISUAL**
 * fetch를 이용한 JSON데이터 가져와 내용 및 이미지 변경
 * 포커스 라인 애니메이션 실행
