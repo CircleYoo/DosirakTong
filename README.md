@@ -21,7 +21,7 @@
 * 모바일형 메뉴 제작
 
 **MAIN VISUAL**
-* fetch를 이용한 JSON데이터 가져와 내용 및 이미지 변경
+* fetch를 이용한 JSON데이터를 가져와 내용 및 이미지 변경
 * 포커스 라인 애니메이션 실행
 
 **SERVICE CATEGORY**
